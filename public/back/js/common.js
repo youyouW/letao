@@ -30,3 +30,17 @@ $(".child").prev().on("click",function(){
      $(".lt_main").toggleClass("now");
      
  })
+$(".icon_logout").on("click", function(){
+    $("#logoutModal").modal("show");
+});
+$(".btn_logout").on("click",function () {
+    $.ajax({
+        type:"get",
+        url:"/employee/employeeLogout",
+        success:function (data) {
+            if(data.success){
+                window.location.href = "login.html";
+            }
+        }
+    })
+});
