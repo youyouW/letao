@@ -21,4 +21,8 @@ $(document).ajaxStop(function () {
         NProgress.done();
     }, 500);
 });
+$(".child").prev().on("click",function(){
+    $(this).next().slideToggle();
+
+})
  
