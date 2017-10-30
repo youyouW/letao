@@ -25,4 +25,8 @@ $(".child").prev().on("click",function(){
     $(this).next().slideToggle();
 
 })
- 
+ $(".icon_menu").on("click", function () {
+     $(".lt_aside").toggleClass("now");
+     $(".lt_main").toggleClass("now");
+     
+ })
